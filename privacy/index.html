@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Zikirmatik - Kullanıcı Sözleşmesi ve Gizlilik Politikası</title>
-
-<meta
-name="description"
-content="Zikirmatik uygulamasına ait Kullanıcı Sözleşmesi ve Gizlilik Politikası."
-
->
+  <title>Zikirmatik - Gizlilik Politikası</title>
+  <meta
+    name="description"
+    content="Zikirmatik uygulamasının gizlilik politikası, kullanılan üçüncü taraf hizmetler, abonelikler, reklamlar ve veri işleme uygulamaları."
+  />
 
   <style>
+    :root {
+      --background: #0f0f12;
+      --card: #18181d;
+      --card-secondary: #202027;
+      --text: #f5f5f7;
+      --secondary-text: #b2b2ba;
+      --muted-text: #85858f;
+      --accent: #efaa68;
+      --border: rgba(255, 255, 255, 0.08);
+      --link: #f3b77e;
+      --max-width: 900px;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -24,322 +34,802 @@ content="Zikirmatik uygulamasına ait Kullanıcı Sözleşmesi ve Gizlilik Polit
 
     body {
       margin: 0;
-      background-color: #f5f6f7;
-      color: #222222;
+      padding: 0;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(239, 170, 104, 0.08),
+          transparent 34%
+        ),
+        var(--background);
+
+      color: var(--text);
       font-family:
         -apple-system,
         BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
         "Segoe UI",
         Roboto,
         Helvetica,
         Arial,
         sans-serif;
-      font-size: 16px;
+
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      width: min(100% - 32px, 920px);
-      margin: 40px auto;
-      padding: 48px;
-      background-color: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 56px 0 80px;
     }
 
-    h1,
-    h2,
-    h3 {
-      color: #17201b;
-      line-height: 1.3;
+    .header {
+      margin-bottom: 32px;
+      padding: 36px;
+      background: linear-gradient(
+        145deg,
+        rgba(239, 170, 104, 0.12),
+        rgba(255, 255, 255, 0.025)
+      );
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .app-name {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 34px;
-      text-align: center;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
     }
 
-    h2 {
-      margin-top: 48px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #e5e9e6;
-      font-size: 26px;
-    }
-
-    h3 {
-      margin-top: 30px;
-      font-size: 20px;
-    }
-
-    p {
-      margin: 14px 0;
-    }
-
-    ul {
-      padding-left: 24px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #28754a;
-      word-break: break-word;
-    }
-
-    .updated-date {
-      margin-bottom: 40px;
-      color: #666666;
-      text-align: center;
+    .updated {
+      margin-top: 18px;
+      color: var(--secondary-text);
+      font-size: 14px;
     }
 
     .intro {
-      padding: 20px;
-      background-color: #f1f7f3;
-      border-left: 4px solid #28754a;
-      border-radius: 10px;
+      margin-top: 26px;
+      color: var(--secondary-text);
+      font-size: 17px;
     }
 
-    .contact-box {
-      margin-top: 24px;
-      padding: 22px;
-      background-color: #f1f7f3;
-      border-radius: 12px;
+    .section {
+      margin-top: 18px;
+      padding: 30px 32px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: 23px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      color: var(--accent);
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--secondary-text);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 12px 0 18px;
+      padding-left: 23px;
+      color: var(--secondary-text);
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .service {
+      padding: 16px 18px;
+      background: var(--card-secondary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .service strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .service span {
+      color: var(--secondary-text);
+      font-size: 14px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 18px;
+      background: rgba(239, 170, 104, 0.08);
+      border: 1px solid rgba(239, 170, 104, 0.18);
+      border-radius: 14px;
+      color: var(--secondary-text);
+    }
+
+    .contact {
+      margin-top: 18px;
+      padding: 20px;
+      background: var(--card-secondary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .contact-row {
+      margin: 6px 0;
+      color: var(--secondary-text);
     }
 
     footer {
-      margin-top: 50px;
-      padding-top: 24px;
-      border-top: 1px solid #dddddd;
-      color: #777777;
-      font-size: 14px;
+      padding: 30px 10px 0;
+      color: var(--muted-text);
       text-align: center;
+      font-size: 13px;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #101411;
-        color: #e7e9e7;
-      }
-
+    @media (max-width: 600px) {
       .container {
-        background-color: #19201b;
-        box-shadow: none;
+        width: min(calc(100% - 22px), var(--max-width));
+        padding-top: 24px;
+        padding-bottom: 50px;
       }
 
-      h1,
-      h2,
-      h3 {
-        color: #ffffff;
+      .header {
+        padding: 26px 22px;
+        border-radius: 20px;
+      }
+
+      .section {
+        padding: 24px 20px;
+        border-radius: 18px;
       }
 
       h2 {
-        border-bottom-color: #354039;
+        font-size: 21px;
       }
 
-      .updated-date {
-        color: #b8beb9;
-      }
-
-      .intro,
-      .contact-box {
-        background-color: #222c25;
-      }
-
-      a {
-        color: #74d69c;
-      }
-
-      footer {
-        color: #a8afa9;
-        border-top-color: #354039;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        width: 100%;
-        margin: 0;
-        padding: 28px 20px;
-        border-radius: 0;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        margin-top: 38px;
-        font-size: 23px;
+      .intro {
+        font-size: 16px;
       }
     }
   </style>
-
 </head>
 
 <body>
   <main class="container">
-    Zikirmatik Gizlilik Politikası
-Son güncelleme: 7 Eylül 2026
-Bu Gizlilik Politikası, Zikirmatik mobil uygulamasının (“Uygulama”) kullanımı sırasında hangi bilgilerin işlendiğini, bu bilgilerin hangi amaçlarla kullanıldığını ve kullanıcıların gizlilik haklarını açıklamaktadır.
-Uygulamanın geliştiricisi Oktay KÜÇÜKŞAHİN / ShawkStudio’dur.
-1. Toplanan veya İşlenen Bilgiler
-Zikirmatik, uygulamayı kullanabilmek için kullanıcı hesabı oluşturulmasını zorunlu tutmaz ve ad, soyad, telefon numarası veya e-posta adresi gibi bilgileri doğrudan talep etmez.
-Bununla birlikte, kullanılan özelliklere ve üçüncü taraf hizmetlere bağlı olarak aşağıdaki veri kategorileri işlenebilir.
-1.1. Uygulama Kullanım Verileri
-Uygulamanın kullanımını anlamak ve kullanıcı deneyimini geliştirmek amacıyla aşağıdaki türde teknik ve istatistiksel veriler işlenebilir:
-Uygulama sürümü
-Cihaz ve işletim sistemi bilgileri
-Uygulama dili
-Oturum bilgileri
-Uygulama içindeki genel etkileşimler
-Görüntülenen ekranlar ve kullanılan özellikler
-Abonelik/paywall etkileşimleri
-Yaklaşık ülke veya bölge bilgisi
-Teknik performans bilgileri
-Bu veriler kullanıcıyı doğrudan tanımlamak amacıyla kullanılmaz.
-1.2. Firebase Analytics
-Uygulama, kullanım istatistiklerini analiz etmek ve uygulamanın geliştirilmesine yardımcı olmak amacıyla Google Firebase Analytics kullanır.
-Firebase Analytics aşağıdaki türde verileri işleyebilir:
-Cihaz ve uygulama bilgileri
-Uygulama içi etkileşimler
-Oturum bilgileri
-Yaklaşık konum veya bölge bilgisi
-Uygulama dili
-Kullanım ve performans verileri
-Uygulama, Firebase Analytics üzerinden kullanıcıya ait ad, e-posta adresi veya özel bir Firebase User ID göndermeyi amaçlamaz.
-Zikirmatik’in mevcut Firebase Analytics entegrasyonu reklam kimliğine (IDFA) erişmek amacıyla yapılandırılmamıştır.
-Google, bu verileri kendi gizlilik politikaları doğrultusunda işleyebilir.
-1.3. Reklamlar — Google AdMob ve UMP
-Uygulamanın ücretsiz sürümünde reklam gösterilebilir.
-Reklam hizmetlerinin sağlanması amacıyla Google AdMob kullanılmaktadır. Reklam tercihleri ve gerekli izin süreçleri için Google User Messaging Platform (UMP) kullanılabilir.
-Bu hizmetler, kullanıcının cihazına, bölgesine, reklam tercihine ve verdiği izinlere bağlı olarak aşağıdaki türde bilgileri işleyebilir:
-Cihaz bilgileri
-Cihaz veya reklam tanımlayıcıları
-Yaklaşık konum
-Reklam görüntüleme ve etkileşim bilgileri
-Uygulama kullanım bilgileri
-Reklam performans bilgileri
-Gizlilik ve onay tercihleri
-Reklamların kişiselleştirilmesi veya kullanıcı takibi, kullanıcının cihaz ayarlarına, bölgesine ve verdiği izinlere bağlı olabilir.
-Google AdMob ve UMP tarafından gerçekleştirilen veri işlemleri Google’ın kendi gizlilik politikalarına tabidir.
-1.4. Abonelik ve Satın Alma Bilgileri
-Zikirmatik, otomatik yenilenen Premium abonelikler sunabilir.
-Satın alma işlemleri Apple App Store üzerinden gerçekleştirilir.
-Geliştirici:
-Kullanıcının kredi kartı veya banka kartı bilgilerini görmez,
-Ödeme kartı bilgilerini saklamaz,
-Ödeme işlemini doğrudan gerçekleştirmez.
-Abonelik durumunun doğrulanması ve Premium erişimin yönetilmesi amacıyla aşağıdaki bilgiler işlenebilir:
-Satın alınan abonelik ürünü
-Ürün kimliği
-Abonelik durumu
-Aboneliğin aktif olup olmadığı
-Yenileme veya sona erme bilgileri
-Satın alma işlemiyle ilişkili teknik tanımlayıcılar
-1.5. RevenueCat
-Aboneliklerin ve Premium erişimin yönetilmesi amacıyla RevenueCat hizmeti kullanılmaktadır.
-RevenueCat, abonelik durumunu doğrulamak için App Store tarafından sağlanan satın alma ve abonelik bilgilerini işleyebilir.
-RevenueCat ayrıca abonelik yönetimi için anonim veya teknik kullanıcı tanımlayıcıları kullanabilir.
-RevenueCat, ödeme kartı bilgilerini Zikirmatik adına toplamaz veya saklamaz.
-1.6. Yerel Uygulama Verileri
-Aşağıdaki bilgiler kullanıcının cihazında yerel olarak saklanabilir:
-Zikir sayaç değerleri
-Zikir geçmişi
-Günlük hedefler
-Seri bilgileri
-Kullanıcının oluşturduğu özel zikirler
-Favoriler
-Uygulama tercihleri
-Bildirim tercihleri
-Dil tercihi
-Bu veriler, uygulamanın temel özelliklerinin çalışması için kullanılabilir.
-Uygulamanın cihazdan silinmesi, cihazda yerel olarak saklanan bu verilerin silinmesine neden olabilir.
-1.7. Bildirimler
-Kullanıcı izin verdiği takdirde Zikirmatik aşağıdaki türde bildirimler gönderebilir:
-Günlük zikir hatırlatmaları
-Günlük hedef hatırlatmaları
-Seri bozulmadan önce hatırlatmalar
-Belirli bir süre kullanılmadığında uygulamaya geri dönüş hatırlatmaları
-Bildirim izni kullanıcı tarafından cihaz ayarlarından herhangi bir zamanda kapatılabilir.
-1.8. Kullanıcının İletişim Yoluyla Gönderdiği Bilgiler
-Kullanıcı destek veya geri bildirim amacıyla geliştiriciyle iletişime geçtiğinde, gönüllü olarak gönderdiği bilgiler işlenebilir.
-Bunlar şunları içerebilir:
-Ad veya kullanıcı tarafından verilen isim
-E-posta adresi
-Mesaj içeriği
-Ekran görüntüleri
-Teknik bilgiler
-Bu bilgiler yalnızca ilgili talebin yanıtlanması, sorunların çözülmesi ve hizmetin geliştirilmesi amacıyla kullanılır.
-2. Bilgilerin Kullanım Amaçları
-İşlenen bilgiler aşağıdaki amaçlarla kullanılabilir:
-Uygulama özelliklerini sunmak
-Kullanıcı tercihlerini uygulamak
-Zikir ve hedef verilerini yönetmek
-Premium abonelikleri doğrulamak
-Reklam göstermek
-Kullanıcıların gizlilik ve reklam tercihlerini uygulamak
-Uygulama kullanımını analiz etmek
-Performansı ölçmek
-Kullanıcı deneyimini geliştirmek
-Teknik sorunları tespit etmek
-Destek taleplerini yanıtlamak
-Yasal yükümlülükleri yerine getirmek
-3. Üçüncü Taraf Hizmetler
-Zikirmatik aşağıdaki üçüncü taraf hizmetlerden yararlanabilir:
-Apple App Store
-Google Firebase Analytics
-Google AdMob
-Google User Messaging Platform (UMP)
-RevenueCat
-Bu hizmetler kendi gizlilik politikaları ve kullanım koşulları doğrultusunda veri işleyebilir.
-Kullanıcıların ilgili hizmet sağlayıcıların gizlilik politikalarını ayrıca incelemeleri önerilir.
-4. Verilerin Satılması
-Zikirmatik, kullanıcıların kişisel bilgilerini üçüncü taraflara satmaz.
-Veriler yalnızca uygulamanın çalışması, analiz, reklam, abonelik yönetimi, teknik hizmetlerin sağlanması veya yasal yükümlülüklerin yerine getirilmesi amacıyla gerekli hizmet sağlayıcılarla paylaşılabilir.
-5. Veri Saklama
-Geliştirici tarafından doğrudan işlenen kişisel bilgiler yalnızca gerekli olduğu süre boyunca saklanır.
-Uygulama içindeki bazı bilgiler yalnızca kullanıcının cihazında saklanabilir.
-Firebase Analytics, Google AdMob, RevenueCat ve Apple tarafından işlenen verilerin saklama süreleri ilgili hizmet sağlayıcıların kendi politikalarına göre belirlenir.
-6. Veri Güvenliği
-Kullanıcı bilgilerinin yetkisiz erişim, değişiklik, ifşa veya kayba karşı korunması amacıyla makul teknik ve idari önlemler alınır.
-Bununla birlikte, hiçbir elektronik veri aktarım veya saklama yönteminin tamamen güvenli olduğu garanti edilemez.
-7. Kullanıcı Hakları
-Kullanıcılar, yürürlükteki mevzuat kapsamında kendileriyle ilgili kişisel veriler için aşağıdaki haklara sahip olabilir:
-Kişisel verilerinin işlenip işlenmediğini öğrenme
-İşlenen veriler hakkında bilgi talep etme
-Verilerin hangi amaçla kullanıldığını öğrenme
-Yanlış veya eksik verilerin düzeltilmesini isteme
-Yasal şartların oluşması durumunda verilerin silinmesini isteme
-Veri işleme faaliyetlerine ilişkin itiraz veya şikâyette bulunma
-Bu konulardaki talepler aşağıdaki e-posta adresine gönderilebilir:
-shawkstudioapp@gmail.com
-8. Çocukların Gizliliği
-Zikirmatik, bilerek 13 yaşından küçük çocuklardan kişisel bilgi toplamayı amaçlamaz.
-13 yaşından küçük bir çocuğa ait kişisel verinin işlendiğinin fark edilmesi halinde, ilgili verilerin silinmesi için makul önlemler alınacaktır.
-Yerel mevzuatın daha yüksek bir yaş sınırı gerektirdiği durumlarda ilgili yasal düzenlemeler geçerlidir.
-9. Abonelikler ve Ödemeler
-Premium abonelikler Apple App Store üzerinden satın alınır.
-Otomatik yenilenen abonelikler, kullanıcı iptal etmediği sürece ilgili abonelik döneminin sonunda yenilenebilir.
-Abonelikler Apple hesabındaki abonelik yönetimi bölümünden görüntülenebilir veya iptal edilebilir.
-Uygulamanın cihazdan silinmesi aktif aboneliği otomatik olarak iptal etmez.
-İptal, yenileme ve para iadesi işlemleri Apple’ın yürürlükteki kurallarına tabidir.
-Zikirmatik, Apple’ın Standart Kullanım Koşulları’nı (EULA) kullanmaktadır.
-Terms of Use (EULA):
-https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-10. Gizlilik Politikasındaki Değişiklikler
-Bu Gizlilik Politikası; uygulamanın özelliklerinde, üçüncü taraf hizmetlerde veya yürürlükteki mevzuatta değişiklik olması halinde güncellenebilir.
-Güncel sürüm her zaman bu sayfada yayımlanır.
-Önemli değişikliklerde kullanıcılar uygun yöntemlerle bilgilendirilebilir.
-11. İletişim
-Gizlilik Politikası veya Zikirmatik hakkında soru ve talepler için:
-Geliştirici: Oktay KÜÇÜKŞAHİN
-Uygulama: Zikirmatik
-E-posta: shawkstudioapp@gmail.com
-© 2026 Zikirmatik. Tüm hakları saklıdır.
+
+    <header class="header">
+      <div class="app-name">Zikirmatik</div>
+
+      <h1>Gizlilik Politikası</h1>
+
+      <div class="updated">
+        Son güncelleme: 7 Eylül 2026
+      </div>
+
+      <p class="intro">
+        Bu Gizlilik Politikası, Zikirmatik mobil uygulamasının
+        (“Uygulama”) kullanımı sırasında hangi bilgilerin işlenebileceğini,
+        bu bilgilerin hangi amaçlarla kullanılabileceğini ve kullanıcıların
+        gizlilik haklarını açıklamaktadır.
+      </p>
+
+      <p class="intro">
+        Uygulama <strong>ShawkStudio</strong> tarafından geliştirilmekte
+        ve sunulmaktadır.
+      </p>
+    </header>
+
+
+    <section class="section">
+      <h2>1. Toplanan veya İşlenen Bilgiler</h2>
+
+      <p>
+        Zikirmatik, uygulamanın temel özelliklerini kullanabilmek için
+        kullanıcı hesabı oluşturulmasını zorunlu tutmaz.
+      </p>
+
+      <p>
+        Uygulama doğrudan ad, soyad, telefon numarası veya e-posta adresi
+        gibi kişisel bilgileri zorunlu olarak talep etmez.
+      </p>
+
+      <p>
+        Bununla birlikte, kullanılan özelliklere ve üçüncü taraf hizmetlere
+        bağlı olarak bazı teknik bilgiler ve kullanım verileri işlenebilir.
+      </p>
+
+
+      <h3>1.1 Uygulama Kullanım Verileri</h3>
+
+      <p>
+        Uygulamanın nasıl kullanıldığını anlamak, performansı değerlendirmek
+        ve kullanıcı deneyimini geliştirmek amacıyla aşağıdaki türde
+        bilgiler işlenebilir:
+      </p>
+
+      <ul>
+        <li>Uygulama sürümü</li>
+        <li>Cihaz ve işletim sistemi bilgileri</li>
+        <li>Uygulama dili</li>
+        <li>Oturum bilgileri</li>
+        <li>Uygulama içindeki genel etkileşimler</li>
+        <li>Görüntülenen ekranlar ve kullanılan özellikler</li>
+        <li>Abonelik ve ödeme ekranlarıyla ilgili etkileşimler</li>
+        <li>Yaklaşık ülke veya bölge bilgileri</li>
+        <li>Teknik performans ve kullanım bilgileri</li>
+      </ul>
+
+
+      <h3>1.2 Firebase Analytics</h3>
+
+      <p>
+        Zikirmatik, uygulamanın kullanımını analiz etmek ve hizmeti
+        geliştirmek amacıyla <strong>Google Firebase Analytics</strong>
+        kullanmaktadır.
+      </p>
+
+      <p>
+        Firebase Analytics; cihaz ve uygulama bilgileri, oturumlar,
+        uygulama içi etkileşimler, uygulama dili, yaklaşık bölge ve benzeri
+        kullanım verilerini işleyebilir.
+      </p>
+
+      <p>
+        Zikirmatik, Firebase Analytics aracılığıyla kullanıcının adını,
+        e-posta adresini veya uygulama tarafından oluşturulmuş kişisel bir
+        kullanıcı profili göndermeyi amaçlamaz.
+      </p>
+
+      <p>
+        Firebase Analytics tarafından gerçekleştirilen veri işleme
+        faaliyetleri Google'ın kendi gizlilik politikalarına tabidir.
+      </p>
+
+
+      <h3>1.3 Google AdMob ve Reklamlar</h3>
+
+      <p>
+        Zikirmatik'in ücretsiz sürümünde reklamlar gösterilebilir.
+        Reklamların sağlanması için <strong>Google AdMob</strong>
+        kullanılmaktadır.
+      </p>
+
+      <p>
+        AdMob; kullanıcının cihazına, bölgesine, gizlilik tercihlerine ve
+        verdiği izinlere bağlı olarak aşağıdaki türde bilgileri işleyebilir:
+      </p>
+
+      <ul>
+        <li>Cihaz bilgileri</li>
+        <li>Cihaz veya reklam tanımlayıcıları</li>
+        <li>Yaklaşık konum veya bölge</li>
+        <li>Reklam görüntüleme bilgileri</li>
+        <li>Reklam etkileşimleri</li>
+        <li>Uygulama kullanım bilgileri</li>
+        <li>Reklam performans bilgileri</li>
+      </ul>
+
+      <p>
+        Reklamlarla ilgili gizlilik tercihlerini ve gerekli onay süreçlerini
+        yönetmek amacıyla
+        <strong>Google User Messaging Platform (UMP)</strong>
+        kullanılabilir.
+      </p>
+
+      <p>
+        Reklamların kişiselleştirilmesi veya ilgili veri işleme faaliyetleri;
+        kullanıcının bulunduğu bölgeye, cihaz ayarlarına ve verdiği izinlere
+        bağlı olabilir.
+      </p>
+
+
+      <h3>1.4 Abonelik ve Satın Alma Bilgileri</h3>
+
+      <p>
+        Zikirmatik, otomatik yenilenen Premium abonelikler sunabilir.
+        Satın alma işlemleri <strong>Apple App Store</strong> üzerinden
+        gerçekleştirilir.
+      </p>
+
+      <p>
+        ShawkStudio kullanıcının kredi kartı veya banka kartı bilgilerini
+        doğrudan görmez, toplamaz veya saklamaz.
+      </p>
+
+      <p>
+        Abonelik durumunun doğrulanması ve Premium erişimin yönetilmesi için
+        aşağıdaki türde bilgiler işlenebilir:
+      </p>
+
+      <ul>
+        <li>Satın alınan abonelik ürünü</li>
+        <li>Ürün kimliği</li>
+        <li>Abonelik durumu</li>
+        <li>Premium erişimin aktif olup olmadığı</li>
+        <li>Yenileme ve sona erme bilgileri</li>
+        <li>Satın alma işlemiyle ilişkili teknik bilgiler</li>
+      </ul>
+
+
+      <h3>1.5 RevenueCat</h3>
+
+      <p>
+        Zikirmatik, aboneliklerin ve Premium erişimin yönetilmesi amacıyla
+        <strong>RevenueCat</strong> hizmetini kullanmaktadır.
+      </p>
+
+      <p>
+        RevenueCat, abonelik durumunun doğrulanabilmesi için App Store
+        tarafından sağlanan satın alma ve abonelik bilgilerini işleyebilir.
+      </p>
+
+      <p>
+        RevenueCat ayrıca abonelik yönetimi amacıyla anonim veya teknik
+        kullanıcı tanımlayıcıları kullanabilir.
+      </p>
+
+      <p>
+        Kullanıcının ödeme kartı bilgileri RevenueCat aracılığıyla
+        Zikirmatik'e aktarılmaz.
+      </p>
+
+
+      <h3>1.6 Cihazda Saklanan Uygulama Verileri</h3>
+
+      <p>
+        Zikirmatik'in temel özelliklerinin çalışabilmesi için bazı bilgiler
+        kullanıcının cihazında yerel olarak saklanabilir.
+      </p>
+
+      <ul>
+        <li>Zikir sayaç değerleri</li>
+        <li>Zikir geçmişi</li>
+        <li>Günlük hedefler</li>
+        <li>Seri bilgileri</li>
+        <li>Kullanıcının oluşturduğu özel zikirler</li>
+        <li>Favoriler</li>
+        <li>Uygulama tercihleri</li>
+        <li>Bildirim tercihleri</li>
+        <li>Dil tercihi</li>
+      </ul>
+
+      <p>
+        Uygulamanın cihazdan kaldırılması, cihazda yerel olarak saklanan
+        bazı uygulama verilerinin silinmesine neden olabilir.
+      </p>
+
+
+      <h3>1.7 Bildirimler</h3>
+
+      <p>
+        Kullanıcı bildirim izni verdiği takdirde Zikirmatik aşağıdaki
+        amaçlarla bildirim gönderebilir:
+      </p>
+
+      <ul>
+        <li>Günlük zikir hatırlatmaları</li>
+        <li>Günlük hedef hatırlatmaları</li>
+        <li>Serinin korunmasına yönelik hatırlatmalar</li>
+        <li>Uygulamaya geri dönüş hatırlatmaları</li>
+      </ul>
+
+      <p>
+        Kullanıcı bildirim iznini cihazının Ayarlar bölümünden istediği
+        zaman değiştirebilir veya kapatabilir.
+      </p>
+
+
+      <h3>1.8 Kullanıcının İletişim Yoluyla Gönderdiği Bilgiler</h3>
+
+      <p>
+        Kullanıcı destek veya geri bildirim amacıyla ShawkStudio ile
+        iletişime geçtiğinde gönüllü olarak gönderdiği bilgiler işlenebilir.
+      </p>
+
+      <p>
+        Bu bilgiler e-posta adresi, mesaj içeriği, ekran görüntüsü veya
+        kullanıcının gönüllü olarak sağladığı teknik bilgileri içerebilir.
+      </p>
+
+      <p>
+        Bu bilgiler yalnızca talebin yanıtlanması, teknik sorunların
+        çözülmesi ve uygulamanın geliştirilmesi amacıyla kullanılabilir.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>2. Bilgilerin Kullanım Amaçları</h2>
+
+      <p>
+        İşlenen bilgiler aşağıdaki amaçlarla kullanılabilir:
+      </p>
+
+      <ul>
+        <li>Uygulamanın temel özelliklerini sunmak</li>
+        <li>Kullanıcı tercihlerini uygulamak</li>
+        <li>Zikir ve hedef verilerini yönetmek</li>
+        <li>Premium abonelikleri doğrulamak ve yönetmek</li>
+        <li>Reklamları göstermek ve reklam performansını ölçmek</li>
+        <li>Gizlilik ve reklam tercihlerini uygulamak</li>
+        <li>Uygulama kullanımını analiz etmek</li>
+        <li>Uygulamanın performansını değerlendirmek</li>
+        <li>Kullanıcı deneyimini geliştirmek</li>
+        <li>Teknik sorunları tespit etmek ve çözmek</li>
+        <li>Destek taleplerini yanıtlamak</li>
+        <li>Yasal yükümlülükleri yerine getirmek</li>
+      </ul>
+    </section>
+
+
+    <section class="section">
+      <h2>3. Kullanılan Üçüncü Taraf Hizmetler</h2>
+
+      <p>
+        Zikirmatik'in çalışması, analiz, reklam ve abonelik hizmetlerinin
+        sunulması amacıyla aşağıdaki üçüncü taraf hizmetlerden
+        yararlanılabilir.
+      </p>
+
+      <div class="service-list">
+
+        <div class="service">
+          <strong>Apple App Store</strong>
+          <span>
+            Uygulama dağıtımı, abonelikler ve ödeme işlemleri.
+          </span>
+        </div>
+
+        <div class="service">
+          <strong>Google Firebase Analytics</strong>
+          <span>
+            Uygulama kullanımının ve kullanıcı etkileşimlerinin analizi.
+          </span>
+        </div>
+
+        <div class="service">
+          <strong>Google AdMob</strong>
+          <span>
+            Uygulama içinde reklamların sunulması ve reklam performansının
+            ölçülmesi.
+          </span>
+        </div>
+
+        <div class="service">
+          <strong>Google User Messaging Platform (UMP)</strong>
+          <span>
+            Reklam ve gizlilik onaylarının yönetilmesi.
+          </span>
+        </div>
+
+        <div class="service">
+          <strong>RevenueCat</strong>
+          <span>
+            Premium aboneliklerin ve satın alma haklarının yönetilmesi.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        Bu üçüncü taraf hizmetler bazı bilgileri kendi gizlilik
+        politikaları ve hizmet koşulları doğrultusunda işleyebilir.
+      </div>
+
+      <h3>İlgili Gizlilik Politikaları</h3>
+
+      <p>
+        Google Gizlilik Politikası:<br />
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://policies.google.com/privacy
+        </a>
+      </p>
+
+      <p>
+        Firebase Gizlilik ve Güvenlik Bilgileri:<br />
+        <a
+          href="https://firebase.google.com/support/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://firebase.google.com/support/privacy
+        </a>
+      </p>
+
+      <p>
+        RevenueCat Gizlilik Politikası:<br />
+        <a
+          href="https://www.revenuecat.com/privacy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.revenuecat.com/privacy/
+        </a>
+      </p>
+
+      <p>
+        Apple Gizlilik Politikası:<br />
+        <a
+          href="https://www.apple.com/legal/privacy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.apple.com/legal/privacy/
+        </a>
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>4. Verilerin Satılması</h2>
+
+      <p>
+        ShawkStudio, kullanıcıların kişisel bilgilerini doğrudan üçüncü
+        taraflara satmaz.
+      </p>
+
+      <p>
+        Veriler; uygulamanın çalışması, analiz, reklam, abonelik yönetimi,
+        teknik hizmetlerin sunulması veya yasal yükümlülüklerin yerine
+        getirilmesi için gerekli hizmet sağlayıcılar tarafından
+        işlenebilir.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>5. Veri Saklama</h2>
+
+      <p>
+        ShawkStudio tarafından doğrudan işlenen kişisel bilgiler yalnızca
+        ilgili amaç için gerekli olduğu sürece saklanır.
+      </p>
+
+      <p>
+        Uygulamadaki bazı bilgiler yalnızca kullanıcının cihazında yerel
+        olarak saklanabilir.
+      </p>
+
+      <p>
+        Apple, Google ve RevenueCat gibi üçüncü taraf hizmet sağlayıcıların
+        işlediği verilerin saklama süreleri ilgili şirketlerin kendi
+        politikalarına tabidir.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>6. Veri Güvenliği</h2>
+
+      <p>
+        Kullanıcı bilgilerinin yetkisiz erişime, değişikliğe, ifşaya veya
+        kayba karşı korunması amacıyla makul teknik ve idari önlemler
+        uygulanmaya çalışılmaktadır.
+      </p>
+
+      <p>
+        Bununla birlikte, internet üzerinden gerçekleştirilen hiçbir veri
+        aktarımının veya elektronik veri saklama yönteminin yüzde yüz
+        güvenli olduğu garanti edilemez.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>7. Kullanıcı Hakları</h2>
+
+      <p>
+        Kullanıcılar yürürlükteki mevzuat kapsamında, kendileriyle ilgili
+        kişisel veriler konusunda çeşitli haklara sahip olabilir.
+      </p>
+
+      <p>
+        Bu haklar aşağıdakileri içerebilir:
+      </p>
+
+      <ul>
+        <li>Kişisel verilerin işlenip işlenmediğini öğrenmek</li>
+        <li>İşlenen veriler hakkında bilgi talep etmek</li>
+        <li>Verilerin hangi amaçlarla kullanıldığını öğrenmek</li>
+        <li>Yanlış veya eksik bilgilerin düzeltilmesini istemek</li>
+        <li>Yasal şartların oluşması halinde verilerin silinmesini istemek</li>
+        <li>Veri işleme faaliyetlerine ilişkin itirazda bulunmak</li>
+      </ul>
+
+      <p>
+        Gizlilik ile ilgili talepler aşağıdaki iletişim adresine
+        gönderilebilir:
+      </p>
+
+      <div class="contact">
+        <div class="contact-row">
+          <strong>E-posta:</strong>
+          <a href="mailto:shawkstudioapp@gmail.com">
+            shawkstudioapp@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <h2>8. Çocukların Gizliliği</h2>
+
+      <p>
+        Zikirmatik, bilerek çocuklardan kişisel bilgi toplamayı amaçlamaz.
+      </p>
+
+      <p>
+        Bir çocuğa ait kişisel bilginin uygunsuz şekilde işlendiğinin fark
+        edilmesi durumunda ilgili bilgilerin silinmesi için gerekli ve
+        makul adımlar atılabilir.
+      </p>
+
+      <p>
+        Çocukların kişisel verilerinin işlenmesine ilişkin yürürlükteki
+        yerel mevzuat hükümleri geçerlidir.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>9. Premium Abonelikler ve Ödemeler</h2>
+
+      <p>
+        Zikirmatik, otomatik yenilenen Premium abonelik seçenekleri
+        sunabilir.
+      </p>
+
+      <p>
+        Abonelik satın alma ve ödeme işlemleri Apple App Store tarafından
+        gerçekleştirilir.
+      </p>
+
+      <p>
+        Abonelik, kullanıcı tarafından iptal edilmediği sürece ilgili
+        abonelik koşullarına göre otomatik olarak yenilenebilir.
+      </p>
+
+      <p>
+        Kullanıcı aboneliklerini Apple hesabındaki abonelik yönetimi
+        bölümünden görüntüleyebilir, değiştirebilir veya iptal edebilir.
+      </p>
+
+      <p>
+        Uygulamanın cihazdan kaldırılması aktif bir aboneliği otomatik olarak
+        iptal etmez.
+      </p>
+
+      <p>
+        İptal, yenileme ve para iadesi süreçleri Apple'ın ilgili kurallarına
+        ve politikalarına tabidir.
+      </p>
+
+      <h3>Terms of Use (EULA)</h3>
+
+      <p>
+        Zikirmatik, Apple'ın Standart Kullanım Koşulları'nı
+        (Standard EULA) kullanmaktadır.
+      </p>
+
+      <p>
+        <a
+          href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apple Standard Terms of Use (EULA)
+        </a>
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>10. Gizlilik Politikasındaki Değişiklikler</h2>
+
+      <p>
+        Bu Gizlilik Politikası; uygulamanın özelliklerinde, kullanılan
+        üçüncü taraf hizmetlerde veya yürürlükteki mevzuatta değişiklik
+        olması halinde güncellenebilir.
+      </p>
+
+      <p>
+        Güncel sürüm bu sayfada yayımlanacaktır.
+      </p>
+
+      <p>
+        Önemli değişikliklerin yapılması halinde kullanıcılar uygun
+        yöntemlerle bilgilendirilebilir.
+      </p>
+    </section>
+
+
+    <section class="section">
+      <h2>11. İletişim</h2>
+
+      <p>
+        Bu Gizlilik Politikası veya Zikirmatik hakkında soru, talep veya
+        geri bildirim için ShawkStudio ile iletişime geçebilirsiniz.
+      </p>
+
+      <div class="contact">
+
+        <div class="contact-row">
+          <strong>Geliştirici:</strong>
+          ShawkStudio
+        </div>
+
+        <div class="contact-row">
+          <strong>Uygulama:</strong>
+          Zikirmatik
+        </div>
+
+        <div class="contact-row">
+          <strong>E-posta:</strong>
+          <a href="mailto:shawkstudioapp@gmail.com">
+            shawkstudioapp@gmail.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      © 2026 ShawkStudio · Zikirmatik · Tüm hakları saklıdır.
+    </footer>
 
   </main>
 </body>
