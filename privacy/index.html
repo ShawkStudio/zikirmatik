@@ -7,7 +7,7 @@
   <title>Zikirmatik - Gizlilik Politikası</title>
   <meta
     name="description"
-    content="Zikirmatik uygulamasının gizlilik politikası, kullanılan üçüncü taraf hizmetler, abonelikler, reklamlar ve veri işleme uygulamaları."
+    content="Zikirmatik uygulamasının gizlilik politikası, konum kullanımı, üçüncü taraf hizmetler, abonelikler, reklamlar ve veri işleme uygulamaları."
   />
 
   <style>
@@ -251,7 +251,7 @@
       <h1>Gizlilik Politikası</h1>
 
       <div class="updated">
-        Son güncelleme: 7 Eylül 2026
+        Son güncelleme: 10 Eylül 2026
       </div>
 
       <p class="intro">
@@ -287,7 +287,64 @@
       </p>
 
 
-      <h3>1.1 Uygulama Kullanım Verileri</h3>
+      <h3>1.1 Konum Bilgisi</h3>
+
+      <p>
+        Zikirmatik, yalnızca kullanıcı tarafından
+        <strong>Kıble Yönü</strong> veya <strong>Namaz Vakitleri</strong>
+        özellikleri kullanıldığında cihazın konum bilgisine erişebilir.
+      </p>
+
+      <p>
+        Konum bilgisi aşağıdaki amaçlarla kullanılır:
+      </p>
+
+      <ul>
+        <li>Kullanıcının bulunduğu konuma göre Kıble yönünü hesaplamak</li>
+        <li>Kullanıcının bulunduğu konuma göre namaz vakitlerini hesaplamak</li>
+        <li>Konuma uygun saat dilimini belirlemek</li>
+        <li>Namaz vakitleri için uygun bölgesel hesaplama yöntemini belirlemek</li>
+      </ul>
+
+      <p>
+        Uygulama yalnızca
+        <strong>Uygulamayı Kullanırken Konum</strong>
+        (When In Use) izni talep eder.
+        Sürekli veya arka planda konum izni talep edilmez.
+      </p>
+
+      <p>
+        Kıble yönü ve namaz vakti hesaplamalarında kullanılan kesin
+        enlem ve boylam bilgileri uygulamanın temel işlevlerini sağlamak
+        amacıyla kullanılır.
+      </p>
+
+      <p>
+        Bu kesin konum koordinatları Zikirmatik tarafından
+        Firebase Analytics, RevenueCat veya Google AdMob'a özel bir
+        analytics ya da reklam parametresi olarak gönderilmez.
+      </p>
+
+      <p>
+        Kesin konum bilgisi reklam hedefleme veya kullanıcı takibi amacıyla
+        kullanılmaz.
+      </p>
+
+      <p>
+        Namaz vakitlerinin hesaplanması cihaz üzerinde gerçekleştirilir.
+        Konuma uygun saat dilimi ve ülke/bölge bilgisinin belirlenmesi için
+        cihazın işletim sistemi tarafından sunulan konum ve coğrafi
+        kodlama hizmetlerinden yararlanılabilir.
+      </p>
+
+      <p>
+        Kullanıcı konum iznini cihazının Ayarlar bölümünden istediği zaman
+        değiştirebilir veya kapatabilir. Konum izni verilmediğinde Kıble
+        Yönü ve Namaz Vakitleri gibi konuma bağlı özellikler çalışmayabilir.
+      </p>
+
+
+      <h3>1.2 Uygulama Kullanım Verileri</h3>
 
       <p>
         Uygulamanın nasıl kullanıldığını anlamak, performansı değerlendirmek
@@ -308,7 +365,7 @@
       </ul>
 
 
-      <h3>1.2 Firebase Analytics</h3>
+      <h3>1.3 Firebase Analytics</h3>
 
       <p>
         Zikirmatik, uygulamanın kullanımını analiz etmek ve hizmeti
@@ -329,12 +386,18 @@
       </p>
 
       <p>
+        Zikirmatik'in Kıble Yönü veya Namaz Vakitleri için kullandığı kesin
+        enlem ve boylam bilgileri Firebase Analytics'e özel event parametresi
+        olarak gönderilmez.
+      </p>
+
+      <p>
         Firebase Analytics tarafından gerçekleştirilen veri işleme
         faaliyetleri Google'ın kendi gizlilik politikalarına tabidir.
       </p>
 
 
-      <h3>1.3 Google AdMob ve Reklamlar</h3>
+      <h3>1.4 Google AdMob ve Reklamlar</h3>
 
       <p>
         Zikirmatik'in ücretsiz sürümünde reklamlar gösterilebilir.
@@ -350,12 +413,18 @@
       <ul>
         <li>Cihaz bilgileri</li>
         <li>Cihaz veya reklam tanımlayıcıları</li>
-        <li>Yaklaşık konum veya bölge</li>
+        <li>Yaklaşık konum veya bölge bilgileri</li>
         <li>Reklam görüntüleme bilgileri</li>
         <li>Reklam etkileşimleri</li>
         <li>Uygulama kullanım bilgileri</li>
         <li>Reklam performans bilgileri</li>
       </ul>
+
+      <p>
+        Kıble Yönü ve Namaz Vakitleri için CoreLocation üzerinden alınan
+        kesin koordinatlar, Zikirmatik tarafından AdMob'a reklam parametresi
+        olarak gönderilmez.
+      </p>
 
       <p>
         Reklamlarla ilgili gizlilik tercihlerini ve gerekli onay süreçlerini
@@ -371,7 +440,7 @@
       </p>
 
 
-      <h3>1.4 Abonelik ve Satın Alma Bilgileri</h3>
+      <h3>1.5 Abonelik ve Satın Alma Bilgileri</h3>
 
       <p>
         Zikirmatik, otomatik yenilenen Premium abonelikler sunabilir.
@@ -399,7 +468,7 @@
       </ul>
 
 
-      <h3>1.5 RevenueCat</h3>
+      <h3>1.6 RevenueCat</h3>
 
       <p>
         Zikirmatik, aboneliklerin ve Premium erişimin yönetilmesi amacıyla
@@ -421,8 +490,13 @@
         Zikirmatik'e aktarılmaz.
       </p>
 
+      <p>
+        Kıble Yönü ve Namaz Vakitleri özelliklerinde kullanılan kesin
+        konum koordinatları RevenueCat'e gönderilmez.
+      </p>
 
-      <h3>1.6 Cihazda Saklanan Uygulama Verileri</h3>
+
+      <h3>1.7 Cihazda Saklanan Uygulama Verileri</h3>
 
       <p>
         Zikirmatik'in temel özelliklerinin çalışabilmesi için bazı bilgiler
@@ -439,6 +513,7 @@
         <li>Uygulama tercihleri</li>
         <li>Bildirim tercihleri</li>
         <li>Dil tercihi</li>
+        <li>Namaz vakti hesaplamaları için gerekli geçici yerel önbellek verileri</li>
       </ul>
 
       <p>
@@ -447,7 +522,7 @@
       </p>
 
 
-      <h3>1.7 Bildirimler</h3>
+      <h3>1.8 Bildirimler</h3>
 
       <p>
         Kullanıcı bildirim izni verdiği takdirde Zikirmatik aşağıdaki
@@ -467,7 +542,7 @@
       </p>
 
 
-      <h3>1.8 Kullanıcının İletişim Yoluyla Gönderdiği Bilgiler</h3>
+      <h3>1.9 Kullanıcının İletişim Yoluyla Gönderdiği Bilgiler</h3>
 
       <p>
         Kullanıcı destek veya geri bildirim amacıyla geliştirici ile
@@ -497,6 +572,9 @@
         <li>Uygulamanın temel özelliklerini sunmak</li>
         <li>Kullanıcı tercihlerini uygulamak</li>
         <li>Zikir ve hedef verilerini yönetmek</li>
+        <li>Kullanıcının konumuna göre Kıble yönünü hesaplamak</li>
+        <li>Kullanıcının konumuna göre namaz vakitlerini hesaplamak</li>
+        <li>Konuma uygun saat dilimini ve bölgesel namaz vakti hesaplama yöntemini belirlemek</li>
         <li>Premium abonelikleri doğrulamak ve yönetmek</li>
         <li>Reklamları göstermek ve reklam performansını ölçmek</li>
         <li>Gizlilik ve reklam tercihlerini uygulamak</li>
@@ -640,6 +718,13 @@
       <p>
         Uygulamadaki bazı bilgiler yalnızca kullanıcının cihazında yerel
         olarak saklanabilir.
+      </p>
+
+      <p>
+        Kıble Yönü ve Namaz Vakitleri için kullanılan konum bilgileri,
+        uygulamanın ilgili işlevlerini sağlamak amacıyla işlenir.
+        Namaz vakti hesaplamalarında kullanılabilen geçici yerel önbellek
+        bilgileri cihazda saklanabilir.
       </p>
 
       <p>
